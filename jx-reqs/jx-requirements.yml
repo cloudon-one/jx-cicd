@@ -1,0 +1,50 @@
+<<EOT
+autoUpdate:
+  enabled: false
+  schedule: ""
+cluster:
+  clusterName: "jx-cicd-cluster"
+  devEnvApprovers: []
+  environmentGitOwner: "yaroslavopsguru"
+  project: "migration-sandbox-289206"
+  provider: gke
+  zone: "europe-west2-b"
+gitops: true
+environments:
+- key: dev
+- key: staging
+- key: production
+ingress:
+  domain: "jx.ancoris.consulting"
+  externalDNS: true
+  tls:
+    email: "ynaumenko@consult.ancoris.com"
+    enabled: true
+    production: true
+kaniko: true
+kuberhealthy: true
+storage:
+  backup:
+    enabled: false
+  logs:
+    enabled: true
+    url: gs://logs-jx-cicd-cluster-f57771b1cbba
+  reports:
+    enabled: true
+    url: gs://reports-jx-cicd-cluster-f57771b1cbba
+  repository:
+    enabled: true
+    url: gs://repository-jx-cicd-cluster-f57771b1cbba
+secretStorage: vault
+terraformVault: true
+vault:
+  name: jx-cicd-cluster
+  bucket: vault-jx-cicd-cluster-f57771b1cbba
+  key: crypto-key-jx-cicd-cluster-f57771b1cbba
+  keyring: keyring-jx-cicd-cluster-f57771b1cbba
+  serviceAccount: jx-cicd-cluster-vt
+versionStream:
+  ref: master
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
+webhook: ""
+EOT
