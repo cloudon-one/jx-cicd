@@ -5,20 +5,20 @@ autoUpdate:
 cluster:
   clusterName: "jx-cicd-cluster"
   devEnvApprovers: []
-  environmentGitOwner: "yaroslavopsguru"
-  project: "migration-sandbox-289206"
+  environmentGitOwner: "y"
+  project: ""
   provider: gke
-  zone: "europe-west2-b"
+  zone: ""
 gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
 ingress:
-  domain: "jx.ancoris.consulting"
+  domain: ""
   externalDNS: true
   tls:
-    email: "ynaumenko@consult.ancoris.com"
+    email: ""
     enabled: true
     production: true
 kaniko: true
@@ -28,20 +28,20 @@ storage:
     enabled: false
   logs:
     enabled: true
-    url: gs://logs-jx-cicd-cluster-f57771b1cbba
+    url: gs://
   reports:
     enabled: true
-    url: gs://reports-jx-cicd-cluster-f57771b1cbba
+    url: gs://
   repository:
     enabled: true
-    url: gs://repository-jx-cicd-cluster-f57771b1cbba
+    url: gs://
 secretStorage: vault
 terraformVault: true
 vault:
   name: jx-cicd-cluster
-  bucket: vault-jx-cicd-cluster-f57771b1cbba
-  key: crypto-key-jx-cicd-cluster-f57771b1cbba
-  keyring: keyring-jx-cicd-cluster-f57771b1cbba
+  bucket: vault-jx-cicd-cluster
+  key: crypto-key-jx-cicd-cluster
+  keyring: keyring-jx-cicd-cluster
   serviceAccount: jx-cicd-cluster-vt
 versionStream:
   ref: master
