@@ -5,7 +5,7 @@ autoUpdate:
 cluster:
   clusterName: "jx-cicd-cluster"
   devEnvApprovers: []
-  environmentGitOwner: "y"
+  environmentGitOwner: ""
   project: ""
   provider: gke
   zone: ""
